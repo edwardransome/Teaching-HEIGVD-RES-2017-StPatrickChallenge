@@ -34,6 +34,8 @@ public class StreamProcessorsFactory implements IStreamProcessorsFactory {
                             c = br.read();
                         }
                         bw.flush();
+                        br.close();
+                        bw.close();
                     }
                 };
             default:
